@@ -1,7 +1,7 @@
 import axios from "axios";
 import Cookies from "js-cookie";
 
-axios.defaults.baseURL = process.env.REACT_APP_URL;
+axios.defaults.baseURL = process.env.REACT_APP_BACKEND_URL;
 
 axios.interceptors.request.use(function (config) {
   const token = Cookies.get("access_token");

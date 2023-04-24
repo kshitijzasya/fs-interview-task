@@ -4,30 +4,31 @@ This project is a React application that allows users to log in with role-based 
 
 # Getting Started
 
-Clone this repository to your local machine.
-Install dependencies by running npm install or yarn install.
-Create a .env file at the root of the project
-Start the development server by running npm start or yarn start.
+- Clone this repository to your local machine.
+- Install dependencies by running npm install or yarn install.
+- Create a .env file at the root of the project as same as env.example
+- Start the development server by running npm start or yarn start.
 
 # Features
 
-Sign Up
-Users can create a new account by providing their email and password. Upon successful account creation, the user will be redirected to the login page.
+- Sign Up
+  Users can create a new account by providing their email and password. Upon successful account creation, the user will be redirected to the login page.
 
-Log In
-Users can log in to their account by providing their email and password. Upon successful login, the user will be redirected to the list page of all the users.
+- Log In
+  Users can log in to their account by providing their email and password. Upon successful login, the user will be redirected to the list page of all the users.
 
 Only admin will be able to delete the user list and user will only have permission to read them.
 
-Dependencies
+# Dependencies
+
 This project uses the following dependencies:
 
-react
-react-dom
-react-router-dom
-react-toastify
-js-cookie
-axios
+- react
+- react-dom
+- react-router-dom
+- react-toastify
+- js-cookie
+- axios
 
 ### `npm run build`
 

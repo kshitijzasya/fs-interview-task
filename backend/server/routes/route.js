@@ -1,6 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const userController = require("../controllers/userController");
+const authController = require("../controllers/authController");
 
 router.post("/signup", userController.signup);
 
@@ -8,15 +9,15 @@ router.post("/login", userController.login);
 
 router.get(
   "/users",
-  userController.allowIfLoggedin,
-  userController.grantAccess("readAny", "profile"),
+  authController.allowIfLoggedin,
+  authController.grantAccess("readAny", "profile"),
   userController.getUsers
 );
 
 router.delete(
   "/user/:userId",
-  userController.allowIfLoggedin,
-  userController.grantAccess("deleteAny", "profile"),
+  authController.allowIfLoggedin,
+  authController.grantAccess("deleteAny", "profile"),
   userController.deleteUser
 );
 
