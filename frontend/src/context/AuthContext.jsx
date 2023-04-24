@@ -12,8 +12,8 @@ export const AuthContextProvider = ({ children }) => {
   const [user, setUser] = useState(null);
 
   const updateAuth = (data) => {
-    Cookies.set("access_token", data.access_token);
-    setUser(data.user);
+    Cookies.set("access_token", data.accessToken);
+    setUser(data.data);
   };
 
   const logout = () => {

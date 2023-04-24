@@ -1,15 +1,13 @@
-import { Route, Routes } from "react-router-dom";
-import Login from "./component/Login";
+import { ToastContainer } from "react-toastify";
 import { AuthContextProvider } from "./context/AuthContext";
-import List from "./component/List";
+import AppRoute from "./routes";
+import "react-toastify/dist/ReactToastify.css";
 
 function App() {
   return (
     <AuthContextProvider>
-      <Routes>
-        <Route exact path="/" element={<Login />} />
-        <Route exact path="/list" element={<List />} />
-      </Routes>
+      <AppRoute />
+      <ToastContainer position="top-right" />
     </AuthContextProvider>
   );
 }
